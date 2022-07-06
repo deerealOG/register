@@ -189,7 +189,7 @@ body {
   gap: 10px;
   padding: 0;
   position: relative;
-  left: -22px;
+  left: -24px;
 }
 
 
@@ -213,6 +213,9 @@ body {
   border: transparent;
   border-radius: 10px;
 }
+#mycta .login:hover {
+  background: #ff6a00;
+}
 #mycta .register {
   display: flex;
   flex-direction: row;
@@ -227,6 +230,9 @@ body {
   border-radius: 10px;
   background: transparent;
   border: 1px solid #f37821;
+}
+#mycta .register:hover {
+  color: #f37821;
 }
 #logo {
   
@@ -257,7 +263,7 @@ main {
   justify-content: flex-end;
   gap: 20px;
   position: relative;
-  top: 50px;
+  top: -40px;
   width: auto;
 
   font-family: "Poppins";
@@ -292,7 +298,7 @@ main {
   line-height: 140%;
   color: #030029;
   position: relative;
-  top: 140px;
+  top: 10px;
 }
 #regInSec span {
   color: #26226269;
@@ -305,14 +311,14 @@ main {
   line-height: 150%;
   color: #adadad;
   position: relative;
-  top: 218px;
+  top: 50px;
 }
 #category {
   display: flex;
   flex-direction: column;
   gap: 50px;
   position: relative;
-  top: 240px;
+  top: 60px;
 }
 #role {
   position: relative;
@@ -644,7 +650,8 @@ width: auto;
     margin-top: 0;
   }
   #cta {
-    top: 20px;
+    top: 30px;
+
   }
   #regInSec {
     top: 60px;
