@@ -489,9 +489,9 @@ width: auto;
   color: #262262;
   width: fit-content;
 }
-#terms input {
-  width: 1.2rem;
-  height: 1.2rem;
+#terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
 }
 #terms p {
   margin: 0;
