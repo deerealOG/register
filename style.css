@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #262262;
+  --overlay-color: #262262;
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +10,7 @@
 html {
   font-size: 16px;
 }
+/* width */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -13,62 +18,181 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f37821
+  background: #f37821;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #262262;
-  
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #262262;
- 
+}
 body {
   position: relative;
   width: 100vw;
 }
 #navbar {
   background: #262262;
-  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 87px;
   padding-right: 20px;
-  padding-left: 0;
+  padding-left: 10px;
   transition: all 0.7s ease-in;
-  position: fixed;
+  position: relative;
   top: 0;
   z-index: 10;
 }
-#ipadMenu {
-  display: none;
+.menu-wrap {
+  position: relative;
+  top: -30px;
+  left: -16px;
+  z-index: 1;
+}
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+/* show menu when checked */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+/* scale of menu when shown */
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.7s;
+}
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color[]);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* hamburger line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+/* top line */
+.menu-wrap .hamburger > div::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+/* bottom line */
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* toggler animate */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+/* shakes X line on hover, when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* turns line into X */
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.menu-wrap .menu > div > {
+  text-align: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.menu-wrap .menu > div > ul > li a {
+  font-family: "Poppins";
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.4s;
 }
 
 #mycta {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  width: fit-content;
   align-items: center;
   gap: 10px;
+  padding: 0;
+  position: relative;
+  left: -22px;
 }
 
-#avatar {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-#avatar img {
-  height: auto;
-  width: 40px;
-}
+
 #mycta {
   padding: 0;
   margin: 0;
@@ -105,15 +229,13 @@ body {
   border: 1px solid #f37821;
 }
 #logo {
-  height: 80px;
-  width: 80px;
+  
 }
 #logo:hover {
   cursor: pointer;
 }
 #logo img {
-  height: 80px;
-  width: 80px;
+  height: 40px
 }
 
 #hamburger {
@@ -242,6 +364,19 @@ main {
   flex-direction: column;
   gap: 50px;
 }
+form i {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+
+#passcont {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: auto;
+
+}
 #email {
   display: flex;
   flex-direction: column;
@@ -255,8 +390,8 @@ main {
   line-height: 150%;
   color: #262262;
 }
-#email input {
-  background: #fafafa;
+#eml{
+  background: rgba(38, 34, 98, 0.1);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -265,10 +400,10 @@ main {
   gap: 10px;
   border: transparent;
 }
-#email input:focus {
+#eml:focus {
   outline: solid 2px #f37821;
 }
-#email input::placeholder {
+#eml::placeholder {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
@@ -289,8 +424,8 @@ main {
   line-height: 150%;
   color: #262262;
 }
-#password input {
-  background: #fafafa;
+#pass {
+  background: rgba(38, 34, 98, 0.1);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -298,11 +433,12 @@ main {
   padding: 10px 20px;
   gap: 10px;
   border: transparent;
+  width: 100%;
 }
-#password input:focus {
+#pass:focus {
   outline: solid 2px #f37821;
 }
-#password input::placeholder {
+#pass::placeholder {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
@@ -325,8 +461,14 @@ main {
   line-height: 150%;
   color: #ffffff;
   width: 106px;
+  text-align: center;
   border: transparent;
+  cursor: pointer;
 }
+#submit:hover{
+  background: #ff6a00;
+}
+
 #terms {
   display: flex;
   flex-direction: row;
@@ -342,8 +484,8 @@ main {
   width: fit-content;
 }
 #terms input {
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 #terms p {
   margin: 0;
@@ -417,20 +559,7 @@ main {
     top: 0;
     z-index: 10;
   }
-  #ipadMenu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 140%;
-  }
-  #hamburger {
-    display: none;
-  }
+ 
   
 }
 @media all and (min-width: 860px){}
@@ -487,9 +616,20 @@ main {
     z-index: 10;
     padding-left: 20px;
   }
-
-  #hamburger {
+  #logo img {
+    height: 60px;
+  }
+  .menu-wrap {
     display: none;
+  }
+
+  #mycta .login {
+    font-weight: 700;
+    padding: 10px 24px;
+  }
+  #mycta .register {
+    font-weight: 700;
+    padding: 10px 24px;
   }
   aside {
     display: block;
