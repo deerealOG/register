@@ -1,5 +1,6 @@
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#pass");
+const border = document.querySelector("#passcont");
 
 togglePassword.addEventListener("click", function (e) {
   // toggle the type attribute
@@ -9,3 +10,5 @@ togglePassword.addEventListener("click", function (e) {
   // toggle the eye / eye slash icon
   this.classList.toggle("bi-eye");
 });
+
+border.addEventListener("click", () => {});
