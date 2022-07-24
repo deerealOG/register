@@ -139,8 +139,7 @@ body {
 .hamburger {
   position: absolute;
   top: 4em;
-  right: 5%;
-  margin-left: -2em;
+  right: 5%; 
   margin-top: -45px;
   width: 2em;
   height: 45px;
@@ -150,6 +149,7 @@ body {
 .hamburger div {
   position: relative;
   top: -3px;
+  right: 30px;
   width: 3em;
   height: 7px;
   border-radius: 3px;
