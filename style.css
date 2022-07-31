@@ -25,12 +25,11 @@ body {
   gap: 5px;
   width: 100%;
   height: 80px;
-  padding-right: 20px;
-  padding-left: 15px;
   transition: all 0.7s ease-in;
   position: relative;
   top: 0;
   z-index: 10;
+  padding-left: 2%;
 }
 #navcta .login {
   display: flex;
@@ -125,7 +124,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.25rem;
 
   font-family: "Poppins";
   font-style: normal;
@@ -144,7 +143,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.25rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -158,14 +157,12 @@ body {
 #mycta .register:hover {
   color: #f37821;
 }
-#logo {
-padding: 10px 20px;
-}
+
 #logo:hover {
 cursor: pointer;
 }
 #logo img {
-height: 60px;
+height: 50px;
 }
 
 
@@ -635,6 +632,9 @@ border-radius: 10px;
   #navbar {
     position: fixed;
   }
+  #yourcta {
+    display: none;
+  }
   #mycta {
     margin-right: 0;
   }
@@ -688,13 +688,15 @@ border-radius: 10px;
     padding-left: 20px;
   }
   #logo img {
-    height: 60px;
+    height: 50px;
   }
  
 
   #mycta {
     display: flex;
     gap: 20px;
+    position: absolute;
+    right: 5%;
   }
   #mycta .login {
     font-weight: 700;
