@@ -289,7 +289,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   position: relative;
   top: 10px;
   text-align: center;
@@ -300,7 +300,7 @@ main {
   font-weight: 500;
   font-size: 1rem;
   line-height: 150%;
-  color: rgba(0, 0, 0, 0.8);
+  color: #262262;
 }
 
 
@@ -559,6 +559,9 @@ border-radius: 10px;
   color: rgba(38, 34, 98, 0.6);
   text-decoration: none;
 }
+#google a:hover {
+  color: #F37821;
+}
 #facebook {
   display: flex;
   flex-direction: row;
@@ -573,6 +576,9 @@ border-radius: 10px;
   line-height: 150%;
   color: rgba(38, 34, 98, 0.6);
   text-decoration: none;
+}
+#facebook a:hover {
+  color: #F37821;
 }
 
 @media all and (min-width:320px){
