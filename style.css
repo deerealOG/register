@@ -343,7 +343,7 @@ main {
   top: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 #company {
   display: flex;
@@ -386,7 +386,7 @@ main {
 #textInput {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   width: 100%;
 }
 form i {
@@ -408,7 +408,7 @@ border-radius: 10px;
 #email {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   width: 100%;
 }
 #email p {
@@ -445,7 +445,7 @@ border-radius: 10px;
 #password {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   width: 100%;
 }
 #password p {
@@ -497,6 +497,8 @@ border-radius: 10px;
   text-align: center;
   border: transparent;
   cursor: pointer;
+  position: relative;
+  top: -20px;
 }
 #submit:hover{
   background: #ff6a00;
@@ -516,6 +518,8 @@ border-radius: 10px;
   color: #262262;
   height: max-content;
   width: 100%;
+  position: relative;
+  top: -10px;
 }
 #terms input[type="checkbox"] {
   width: 18px;
@@ -537,6 +541,8 @@ border-radius: 10px;
   align-items: center;
   gap: 30px;
   padding-bottom: 100px;
+  position: relative;
+  top: -20px;
 }
 #google {
   display: flex;
