@@ -326,7 +326,7 @@ main {
   line-height: 150%;
   color: #adadad;
   position: relative;
-  top: 40px;
+  top: 60px;
 }
 #category {
   display: flex;
@@ -340,7 +340,7 @@ main {
 }
 #role {
   position: relative;
-  top: 0;
+  top: 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;
