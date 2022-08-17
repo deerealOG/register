@@ -74,18 +74,18 @@ body {
   top: 10px;
   right: 18%;
   display: flex;
-
   gap: 8px;
- }
+}
+
 #yourcta .login{
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
 
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 140%;
   color: #ffffff;
@@ -98,7 +98,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -251,7 +251,7 @@ Animations
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
-  margin-top: -8px;
+  margin-top: -4px;
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -272,7 +272,7 @@ Animations
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
-  margin-top: -8px;
+  margin-top: -4px;
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -594,15 +594,13 @@ border-radius: 10px;
   }
 }
 
-@media all and (min-width: 660px) {
-  #terms {
-    display: flex;
-    align-items: flex-start;
-    padding: 0;
+@media all and (min-width:768px){
+  #socialLogin {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
-@media all and (min-width: 860px){}
  
 @media all and (min-width: 992px) {
   body {
@@ -618,6 +616,9 @@ border-radius: 10px;
     margin-right: 0;
   }
   .hamburger {
+    display: none;
+  }
+  .nav {
     display: none;
   }
 
@@ -742,7 +743,8 @@ border-radius: 10px;
   }
   #terms {
     position: relative;
-    top:-60px
+    top:-60px;
+    align-items: center;
   }
   
   #socialLogin {
@@ -761,8 +763,9 @@ border-radius: 10px;
     position: fixed;
   }
   main {
-    left: 30%;
+    left: 35%;
   }
+  
 @media all and (min-width: 1400px) {
   #navbar {
     position: fixed;
